@@ -5,6 +5,7 @@ from google import genai
 from dotenv import load_dotenv
 import os
 from json import loads
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
