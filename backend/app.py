@@ -29,7 +29,7 @@ class ProcessTextOutputModel(BaseModel):
     sentimentLabel: str
     keywords: list[str]
 
-@app.post("/process_text", response_model=ProcessTextOutputModel)
+@app.post("/process_text/", response_model=ProcessTextOutputModel)
 async def processText(model: ProcessTextInputModel):
 
       prompt = f"""
