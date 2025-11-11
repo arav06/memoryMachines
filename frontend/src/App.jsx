@@ -34,7 +34,7 @@ const App = () => {
 
     processingTimeout.current = setTimeout(async () => {
       try {
-        const res = await axios.post("/process_text", { data: text });
+        const res = await axios.post("https://memorymachinesapi.onrender.com/process_text/", { data: text });
         setSentiment(res.data.sentimentScore);
         setSentimentLabel(res.data.sentimentLabel);
         setKeywords(res.data.keywords);
