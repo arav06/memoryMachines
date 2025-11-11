@@ -7,11 +7,11 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/process_text': {
-        target: 'http://127.0.0.1:8000',
+        target: 'https://memorymachinesapi.onrender.com/',
         changeOrigin: true
       },
       '/health': {
-        target: 'http://127.0.0.1:8000',
+        target: 'https://memorymachinesapi.onrender.com/',
         changeOrigin: true
       }
     }
