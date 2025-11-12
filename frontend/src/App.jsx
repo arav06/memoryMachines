@@ -8,6 +8,7 @@ import Controls from "./components/Controls";
 import "./App.css";
 
 const DEEPGRAM_API_KEY = import.meta.env.VITE_DEEPGRAM_API_KEY;
+const API_URL = import.meta.env.API_URL;
 
 const App = () => {
   const [isRecording, setIsRecording] = useState(false);
@@ -34,7 +35,7 @@ const App = () => {
 
     processingTimeout.current = setTimeout(async () => {
       try {
-        const res = await axios.post("https://memorymachinesapi.onrender.com/process_text/", { data: text });
+        const res = await axios.post(`${API_URL}/process_text/`, { data: text });
         setSentiment(res.data.sentimentScore);
         setSentimentLabel(res.data.sentimentLabel);
         setKeywords(res.data.keywords);
