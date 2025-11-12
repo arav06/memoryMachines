@@ -85,5 +85,5 @@ cp frontend/.env.example frontend/.env
 cp backend/.env.example backend/.env
 ```
 
-- Frontend environment variable: Deepgram API key
+- Frontend environment variables: Deepgram API key and API URL
 - Backend environment variable: Gemini API key
